@@ -219,7 +219,11 @@ var(--line-[size])
 
 #### stretchShrink
 <p>
-  The stretchShrink property is the opposite of squishGrowth.  As the screen gets larger the element shrinks.  If applied to the width the height of the element will get shorter as the width of the screen gets larger.  If applied to the height the width of your element will shrink as the screen gets taller.  Instead of having a max property the stretchShink uses a <b><i>min</i></b> property to prevent the element from shrinking out of view.  The <b><i>start</i></b> property is the point at which the shrinking should begin to occur as the screen becomes larger.  The <b><i>speed</i></b> setting works the same so there’s no need to reiterate.  To make this even simpler to understand, each of these are categorized as one of three types of properties which goes as follows.
+  The stretchShrink property is the opposite of squishGrowth.  As the screen gets larger the element shrinks.  If applied to the width the height of the element will get shorter as the width of the screen gets larger.  If applied to the height the width of your element will shrink as the screen gets taller.  Instead of having a max property the stretchShink uses a <b><i>min</i></b> property to prevent the element from shrinking out of view.  The <b><i>start</i></b> property is the point at which the shrinking should begin to occur as the screen becomes larger.  The <b><i>speed</i></b> setting works the same so there’s no need to reiterate.  
+</p>
+
+<p>
+  Each of these properties are categorized as one of three behavior types which goes as follows.
 </p>
 <br /><br />
 
@@ -227,11 +231,13 @@ var(--line-[size])
 <p>
   The <b><i>baseSize</i></b> and <b><i>chaseStop</i></b> properties are considered stationary because the element stays at the defined size only adapting according to the speed setting of the size used.
 </p>
+<br />
 
 #### Reactive
 <p>
   The <b><i>crushGap</i></b> and <b><i>edgeChase</i></b> properties are considered reactive because the element breaks out of a stationary state to adjust with the size of the screen.
 </p>
+<br />
 
 #### Counter Reactive
 <p>
