@@ -8,6 +8,10 @@
 
 [Intro](#intro)
 
+[Setup](#setup)
+
+[Size Libraries](#size-libraries)
+
 [Box Size Library](#box-size-library)
 
 [Text Size Library](#text-size-library)
@@ -64,9 +68,23 @@
 <p>
   The golden ratio is present everywhere in nature and is what people instinctively judge by when deciding if a piece of artwork “looks good” or not.  If the portions of the artwork are consistent with the portions they commonly see used in the natural world, the creator of that artwork is deemed a “good artist” because they created something in the same fashion as if nature had done it itself which we intuitively know is a high level of mastery. Another benefit this provides is even in the event of a layout breaking on some device, it will do so in a way that’s proportionate with the golden ratio which will still look and feel right to the user while still being functional and accessible rather than wonky and distorted.
 </p>
-<br /><br />
+<br /><br /><br/>
 
-# Box Size Library
+# Setup
+<p>
+  Until this project becomes widely used enough to make available through a CDN you can just download the file and include it in your project then import it into your main CSS file as shown below.
+  
+  ```css
+  @import url(path_to_folder/srcry.css);
+  ```
+  <br /><br /><br />
+  
+  # Size Libraries
+  <br ><br />
+  
+</p>
+
+## Box Size Library
 <p>
   The <b><i>box size</i></b> library consists of 9 sizes which are <i><b>micro, xTiny, tiny, xSmall, small, loMed, hiMed, large</b></i> and <i><b>jumbo</b></i>.  Each size has a <b><i>scale</i></b> and <b><i>speed</i></b> setting to make them adaptable and relative to the screen which gives you a fine tuned yet flexible means of defining your elements.  It's best to regard a particular size as a range of multiple sizes rather than a static pixel size because what we consider large or small can vary from one device to another.  To keep things simple, there’s a syntax for using these box sizes which goes as follows.
 </p>
@@ -116,7 +134,7 @@ var(--[size]-[scale]-[speed])
   |jumbo-2-1|2206px|
 
 <br /><br />
-# Text Size Library
+## Text Size Library
 <p>
   The text size library consists of 7 sizes that each have 5 speeds giving you a total of 35 scaling options to apply to your text. The 7 sizes are <b><i>caption, widget, article, subtitle, title, headline</b></i> and <b><i>jumbotron</i></b>.  The syntax for using the text size library goes as follows.
 
@@ -140,7 +158,7 @@ var(--text-[size]-[speed])
 ```
 
 <br /><br />
-# Line Size Library
+## Line Size Library
 <p>
   The line size library consists of 11 sizes which are <b><i>fine, light, narrow, semiBold, bold, semiThick, thick, semiWide, wide, ultraWide</i></b> and <b><i>jumbo</i></b>.  There’s no scale or speed setting to these which makes them even simpler to use and the syntax goes as follows.
 </p>
@@ -175,7 +193,7 @@ var(--line-[size])
 }
 ```
 
-<br /><br />
+<br /><br /><br />
 
 # Configuration Classes
 <p>
@@ -183,7 +201,7 @@ var(--line-[size])
 </p>
 <br /><br />
 
-# srcryBox Class
+## srcryBox Class
 <p>
   The srcryBox class provides a family of custom properties for defining the scaling behavior of your elements.  These properties are called <b><i>crushGap, baseSize, edgeChase, chaseStop, squishGrowth</i></b> and <b><i>stretchShrink</i></b>.  Each property is available for both the width and height which can be specified simply by adding w or h at the end of the property.  When learning about the box size library you probably thought to yourself “what if I want the size of my element to be a size that’s somewhere in between two sizes?”.  Srcry resolves this by providing each property with two additional nudging properties called <b><i>nudge-slice</i></b> and <b><i>nudge-chunk</i></b> which are optional.  The <b><i>nudge-slice</i></b> is a very tiny portion that changes based on the size of the screen and a <b><i>nudge-chunk</i></b> is equivalent to 8 nudge slices.  In order to understand this further we need to cover the purpose of each property and how they’re to be used.
 </p>
@@ -243,7 +261,7 @@ var(--line-[size])
 <p>
   The <b><i>squishGrowth</i></b> and <b><i>stretchShrink</i></b> properties are considered counter reactive because they react against the scaling of the screen by either expanding as the screen shrinks or shrinking as the screen expands.
 </p>
-<br /><br />
+<br /><br /><br />
 
 # How To Use The srcryBox Class
 <p>
@@ -452,9 +470,9 @@ var(--line-[size])
   --bleed-scale  
 ```
 
-<br /><br />
+<br /><br /><br />
 
-# srcryTxt Class
+## srcryTxt Class
 
 <p>
   The srcryTxt class helps you easily format your paragraph text using a few custom properties.  These properties are <b><i>text-size</i></b>, <b><i>text-nudge-amt</i></b>, <b><i>kerning-nudge-amt</i></b> and <b><i>leading-nudge-amt</i></b>.  The purpose these properties serve goes as follows.
@@ -508,7 +526,7 @@ var(--line-[size])
 }
 ```
 
-<br /><br />
+<br /><br /><br />
 
 # Conclusion
 <p>
