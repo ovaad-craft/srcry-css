@@ -1,0 +1,117 @@
+:root{
+    /*Text Sizes*/
+    
+    --srcryTextCore : calc(calc(var(--grc15-9) * 1px) + var(--bsp));
+
+
+    /*Caption Text Sizes*/
+    --text-caption-1 : var(--srcryTextCore);
+    --text-caption-2 : calc(var(--text-caption-1) * var(--grc11-2));
+    --text-caption-3 : calc(var(--text-caption-1) * var(--grc11-3));
+    --text-caption-4 : calc(var(--text-caption-1) * var(--grc11-4));
+    --text-caption-5 : calc(var(--text-caption-1) * var(--grc11-5));
+
+    /*Caption Text Negative Values*/
+    --text-caption-1- : calc(0 - var(--text-caption-1));
+    --text-caption-2- : calc(0 - var(--text-caption-2));
+    --text-caption-3- : calc(0 - var(--text-caption-3));
+    --text-caption-4- : calc(0 - var(--text-caption-4));
+    --text-caption-5- : calc(0 - var(--text-caption-5));
+
+
+
+    /*Widget Text Sizes*/
+    --text-widget-1 : calc(var(--text-caption-1) * var(--grc11-5));
+    --text-widget-2 : calc(var(--text-widget-1)  * var(--grc11-2));
+    --text-widget-3 : calc(var(--text-widget-1)  * var(--grc11-3));
+    --text-widget-4 : calc(var(--text-widget-1)  * var(--grc11-4));
+    --text-widget-5 : calc(var(--text-widget-1)  * var(--grc11-5));
+
+    /*Widget Text Negative Values*/
+    --text-widget-1- : calc(0 - var(--text-widget-1));
+    --text-widget-2- : calc(0 - var(--text-widget-2));
+    --text-widget-3- : calc(0 - var(--text-widget-3));
+    --text-widget-4- : calc(0 - var(--text-widget-4));
+    --text-widget-5- : calc(0 - var(--text-widget-5));
+
+
+
+    
+    /*Article Text Sizes*/
+    --text-article-1 : calc(var(--text-widget-1)  + calc(var(--bsp) * 3));
+    --text-article-2 : calc(var(--text-article-1) * var(--grc11-2));
+    --text-article-3 : calc(var(--text-article-1) * var(--grc11-3));
+    --text-article-4 : calc(var(--text-article-1) * var(--grc11-4));
+    --text-article-5 : calc(var(--text-article-1) * var(--grc11-5));
+
+    /*Article Text Negative Values*/
+    --text-article-1- : calc(0 - var(--text-article-1));
+    --text-article-2- : calc(0 - var(--text-article-2));
+    --text-article-3- : calc(0 - var(--text-article-3));
+    --text-article-4- : calc(0 - var(--text-article-4));
+    --text-article-5- : calc(0 - var(--text-article-5));
+
+
+
+    /*Subtitle Text Sizes*/
+    --text-subtitle-1 : calc(var(--text-article-1)  + calc(var(--bsp) * 3));
+    --text-subtitle-2 : calc(var(--text-subtitle-1) * var(--grc11-2));
+    --text-subtitle-3 : calc(var(--text-subtitle-1) * var(--grc11-3));
+    --text-subtitle-4 : calc(var(--text-subtitle-1) * var(--grc11-4));
+    --text-subtitle-5 : calc(var(--text-subtitle-1) * var(--grc11-5));
+
+    /*Subtitle Text Negative Values*/
+    --text-subtitle-1- : calc(0 - var(--text-subtitle-1));
+    --text-subtitle-2- : calc(0 - var(--text-subtitle-2));
+    --text-subtitle-3- : calc(0 - var(--text-subtitle-3));
+    --text-subtitle-4- : calc(0 - var(--text-subtitle-4));
+    --text-subtitle-5- : calc(0 - var(--text-subtitle-5));
+
+
+
+    /*Title Text Sizes*/
+    --text-title-1 : calc(var(--text-subtitle-1) + calc(var(--bsp) * 7));
+    --text-title-2 : calc(var(--text-title-1)    * var(--grc11-2));
+    --text-title-3 : calc(var(--text-title-1)    * var(--grc11-3));
+    --text-title-4 : calc(var(--text-title-1)    * var(--grc11-4));
+    --text-title-5 : calc(var(--text-title-1)    * var(--grc11-5));
+
+    /*Title Text Negative Values*/
+    --text-title-1- : calc(0 - var(--text-title-1));
+    --text-title-2- : calc(0 - var(--text-title-2));
+    --text-title-3- : calc(0 - var(--text-title-3));
+    --text-title-4- : calc(0 - var(--text-title-4));
+    --text-title-5- : calc(0 - var(--text-title-5));
+
+
+
+    /*Headline Text Sizes*/
+    --text-headline-1 : calc(var(--text-title-1)    + calc(var(--bsp) * 7));
+    --text-headline-2 : calc(var(--text-headline-1) * var(--grc11-2));
+    --text-headline-3 : calc(var(--text-headline-1) * var(--grc11-3));
+    --text-headline-4 : calc(var(--text-headline-1) * var(--grc11-4));
+    --text-headline-5 : calc(var(--text-headline-1) * var(--grc11-5));
+
+    /*Headline Text Negative Values*/
+    --text-headline-1- : calc(0 - var(--text-headline-1));
+    --text-headline-2- : calc(0 - var(--text-headline-2));
+    --text-headline-3- : calc(0 - var(--text-headline-3));
+    --text-headline-4- : calc(0 - var(--text-headline-4));
+    --text-headline-5- : calc(0 - var(--text-headline-5));
+
+
+
+    /*Jumbotron Text Sizes*/
+    --text-jumbotron-1 : calc(var(--text-headline-1)  + calc(var(--bsp) * 11));
+    --text-jumbotron-2 : calc(var(--text-jumbotron-1) * var(--grc11-2));
+    --text-jumbotron-3 : calc(var(--text-jumbotron-1) * var(--grc11-3));
+    --text-jumbotron-4 : calc(var(--text-jumbotron-1) * var(--grc11-4));
+    --text-jumbotron-5 : calc(var(--text-jumbotron-1) * var(--grc11-5));
+
+    /*Jumbotron Text Negative Values*/
+    --text-jumbotron-1- : calc(0 - var(--text-jumbotron-1));
+    --text-jumbotron-2- : calc(0 - var(--text-jumbotron-2));
+    --text-jumbotron-3- : calc(0 - var(--text-jumbotron-3));
+    --text-jumbotron-4- : calc(0 - var(--text-jumbotron-4));
+    --text-jumbotron-5- : calc(0 - var(--text-jumbotron-5));
+}
