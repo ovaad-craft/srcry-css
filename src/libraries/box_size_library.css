@@ -1,0 +1,391 @@
+:root{
+    /*---------- Box Sizes ----------*/
+
+    --bsp: calc(var(--whScaleDwn) / 11);
+    
+    
+    /*Micro Scale*/
+    --micro-1-1  : calc(calc(var(--grc14-1)  * 1px) + var(--bsp));
+    --micro-1-2  : max(var(--micro-1-1), calc(calc(var(--grc13-9)  * 1px) + calc(var(--bsp) * 2 )));
+    --micro-1-3  : max(var(--micro-1-1), calc(calc(var(--grc13-6)  * 1px) + calc(var(--bsp) * 4 )));
+    --micro-1-4  : max(var(--micro-1-1), calc(calc(var(--grc13-3)  * 1px) + calc(var(--bsp) * 6 )));
+    --micro-1-5  : max(var(--micro-1-1), calc(calc(var(--grc12-11) * 1px) + calc(var(--bsp) * 7 )));
+    --micro-1-6  : max(var(--micro-1-1), calc(calc(var(--grc12-6)  * 1px) + calc(var(--bsp) * 9 )));
+    --micro-1-7  : max(var(--micro-1-1), calc(calc(var(--grc12-2)  * 1px) + calc(var(--bsp) * 11)));
+    --micro-1-8  : max(var(--micro-1-1), calc(calc(var(--grc11-4)  * 1px) + calc(var(--bsp) * 13)));
+    --micro-1-9  : max(var(--micro-1-1), calc(calc(var(--grc10-2)  * 1px) + calc(var(--bsp) * 15)));
+    --micro-1-10 : max(var(--micro-1-1), calc(calc(var(--grc7-4)   * 1px) + calc(var(--bsp) * 17)));
+    --micro-1-11 : max(var(--micro-1-1), calc(calc(var(--grc1-1)   * 1px) + calc(var(--bsp) * 19)));
+    
+    --micro-2-1  : calc(calc(var(--grc16-1)  * 1px) + var(--bsp));
+    --micro-2-2  : max(var(--micro-2-1), calc(calc(var(--grc15-11) * 1px) + calc(var(--bsp) * 3 )));
+    --micro-2-3  : max(var(--micro-2-1), calc(calc(var(--grc15-9)  * 1px) + calc(var(--bsp) * 5 )));
+    --micro-2-4  : max(var(--micro-2-1), calc(calc(var(--grc15-8)  * 1px) + calc(var(--bsp) * 7 )));
+    --micro-2-5  : max(var(--micro-2-1), calc(calc(var(--grc15-7)  * 1px) + calc(var(--bsp) * 9 )));
+    --micro-2-6  : max(var(--micro-2-1), calc(calc(var(--grc15-5)  * 1px) + calc(var(--bsp) * 11)));
+    --micro-2-7  : max(var(--micro-2-1), calc(calc(var(--grc15-4)  * 1px) + calc(var(--bsp) * 13)));
+    --micro-2-8  : max(var(--micro-2-1), calc(calc(var(--grc15-3)  * 1px) + calc(var(--bsp) * 15)));
+    --micro-2-9  : max(var(--micro-2-1), calc(calc(var(--grc15-1)  * 1px) + calc(var(--bsp) * 17)));
+    --micro-2-10 : max(var(--micro-2-1), calc(calc(var(--grc14-11) * 1px) + calc(var(--bsp) * 19)));
+    --micro-2-11 : max(var(--micro-2-1), calc(calc(var(--grc14-9)  * 1px) + calc(var(--bsp) * 21)));
+
+    
+    /*Micro Scale Negative Values*/
+    --micro-1-1-  :calc(0px - var(--micro-1-1));    --micro-1-2-  :calc(0px - var(--micro-1-2));
+    --micro-1-3-  :calc(0px - var(--micro-1-3));    --micro-1-4-  :calc(0px - var(--micro-1-4));
+    --micro-1-5-  :calc(0px - var(--micro-1-5));    --micro-1-6-  :calc(0px - var(--micro-1-6));
+    --micro-1-7-  :calc(0px - var(--micro-1-7));    --micro-1-8-  :calc(0px - var(--micro-1-8));
+    --micro-1-9-  :calc(0px - var(--micro-1-9));    --micro-1-10- :calc(0px - var(--micro-1-10));
+    --micro-1-11- :calc(0px - var(--micro-1-11));
+    
+    --micro-2-1-  :calc(0px - var(--micro-2-1));    --micro-2-2-  :calc(0px - var(--micro-2-2));
+    --micro-2-3-  :calc(0px - var(--micro-2-3));    --micro-2-4-  :calc(0px - var(--micro-2-4));
+    --micro-2-5-  :calc(0px - var(--micro-2-5));    --micro-2-6-  :calc(0px - var(--micro-2-6));
+    --micro-2-7-  :calc(0px - var(--micro-2-7));    --micro-2-8-  :calc(0px - var(--micro-2-8));
+    --micro-2-9-  :calc(0px - var(--micro-2-9));    --micro-2-10- :calc(0px - var(--micro-2-10));
+    --micro-2-11- :calc(0px - var(--micro-2-11));
+    
+    
+    
+    /*X Tiny Scale*/
+    --xTiny-1-1  : calc(calc(var(--grc17-1)  * 1px) + var(--bsp));
+    --xTiny-1-2  : max(var(--xTiny-1-1), calc(calc(var(--grc16-11) * 1px) + calc(var(--bsp) * 3 )));
+    --xTiny-1-3  : max(var(--xTiny-1-1), calc(calc(var(--grc16-10) * 1px) + calc(var(--bsp) * 6 )));
+    --xTiny-1-4  : max(var(--xTiny-1-1), calc(calc(var(--grc16-9)  * 1px) + calc(var(--bsp) * 8 )));
+    --xTiny-1-5  : max(var(--xTiny-1-1), calc(calc(var(--grc16-8)  * 1px) + calc(var(--bsp) * 10)));
+    --xTiny-1-6  : max(var(--xTiny-1-1), calc(calc(var(--grc16-7)  * 1px) + calc(var(--bsp) * 13)));
+    --xTiny-1-7  : max(var(--xTiny-1-1), calc(calc(var(--grc16-6)  * 1px) + calc(var(--bsp) * 15)));
+    --xTiny-1-8  : max(var(--xTiny-1-1), calc(calc(var(--grc16-5)  * 1px) + calc(var(--bsp) * 17)));
+    --xTiny-1-9  : max(var(--xTiny-1-1), calc(calc(var(--grc16-4)  * 1px) + calc(var(--bsp) * 19)));
+    --xTiny-1-10 : max(var(--xTiny-1-1), calc(calc(var(--grc16-3)  * 1px) + calc(var(--bsp) * 20)));
+    --xTiny-1-11 : max(var(--xTiny-1-1), calc(calc(var(--grc16-2)  * 1px) + calc(var(--bsp) * 22)));
+    
+    --xTiny-2-1  : calc(calc(var(--grc18-1)  * 1px) + var(--bsp));
+    --xTiny-2-2  : max(var(--xTiny-2-1), calc(calc(var(--grc17-11) * 1px) + calc(var(--bsp) * 5 )));
+    --xTiny-2-3  : max(var(--xTiny-2-1), calc(calc(var(--grc17-10) * 1px) + calc(var(--bsp) * 12)));
+    --xTiny-2-4  : max(var(--xTiny-2-1), calc(calc(var(--grc17-9)  * 1px) + calc(var(--bsp) * 16)));
+    --xTiny-2-5  : max(var(--xTiny-2-1), calc(calc(var(--grc17-8)  * 1px) + calc(var(--bsp) * 20)));
+    --xTiny-2-6  : max(var(--xTiny-2-1), calc(calc(var(--grc17-7)  * 1px) + calc(var(--bsp) * 24)));
+    --xTiny-2-7  : max(var(--xTiny-2-1), calc(calc(var(--grc17-5)  * 1px) + calc(var(--bsp) * 28)));
+    --xTiny-2-8  : max(var(--xTiny-2-1), calc(calc(var(--grc17-4)  * 1px) + calc(var(--bsp) * 32)));
+    --xTiny-2-9  : max(var(--xTiny-2-1), calc(calc(var(--grc17-3)  * 1px) + calc(var(--bsp) * 36)));
+    --xTiny-2-10 : max(var(--xTiny-2-1), calc(calc(var(--grc17-2)  * 1px) + calc(var(--bsp) * 40)));
+    --xTiny-2-11 : max(var(--xTiny-2-1), calc(calc(var(--grc17-1)  * 1px) + calc(var(--bsp) * 44)));
+    
+
+    /*xTiny Scale Negative Values*/
+    --xTiny-1-1-  : calc(0px - var(--xTiny-1-1));   --xTiny-1-2-  : calc(0px - var(--xTiny-1-2));
+    --xTiny-1-3-  : calc(0px - var(--xTiny-1-3));   --xTiny-1-4-  : calc(0px - var(--xTiny-1-4));
+    --xTiny-1-5-  : calc(0px - var(--xTiny-1-5));   --xTiny-1-6-  : calc(0px - var(--xTiny-1-6));
+    --xTiny-1-7-  : calc(0px - var(--xTiny-1-7));   --xTiny-1-8-  : calc(0px - var(--xTiny-1-8));
+    --xTiny-1-9-  : calc(0px - var(--xTiny-1-9));   --xTiny-1-10- : calc(0px - var(--xTiny-1-10));
+    --xTiny-1-11- : calc(0px - var(--xTiny-1-11));
+    
+    --xTiny-2-1-  : calc(0px - var(--xTiny-2-1));   --xTiny-2-2-  : calc(0px - var(--xTiny-2-2));
+    --xTiny-2-3-  : calc(0px - var(--xTiny-2-3));   --xTiny-2-4-  : calc(0px - var(--xTiny-2-4));
+    --xTiny-2-5-  : calc(0px - var(--xTiny-2-5));   --xTiny-2-6-  : calc(0px - var(--xTiny-2-6));
+    --xTiny-2-7-  : calc(0px - var(--xTiny-2-7));   --xTiny-2-8-  : calc(0px - var(--xTiny-2-8));
+    --xTiny-2-9-  : calc(0px - var(--xTiny-2-9));   --xTiny-2-10- : calc(0px - var(--xTiny-2-10));
+    --xTiny-2-11- : calc(0px - var(--xTiny-2-11));
+    
+    
+    
+    /*Tiny Scale*/
+    --tiny-1-1  : calc(calc(var(--grc19-1)  * 1px) + var(--bsp));
+    --tiny-1-2  : max(var(--tiny-1-1), calc(calc(var(--grc18-11) * 1px) + calc(var(--bsp) * 7 )));
+    --tiny-1-3  : max(var(--tiny-1-1), calc(calc(var(--grc18-10) * 1px) + calc(var(--bsp) * 13)));
+    --tiny-1-4  : max(var(--tiny-1-1), calc(calc(var(--grc18-9)  * 1px) + calc(var(--bsp) * 20)));
+    --tiny-1-5  : max(var(--tiny-1-1), calc(calc(var(--grc18-8)  * 1px) + calc(var(--bsp) * 26)));
+    --tiny-1-6  : max(var(--tiny-1-1), calc(calc(var(--grc18-7)  * 1px) + calc(var(--bsp) * 32)));
+    --tiny-1-7  : max(var(--tiny-1-1), calc(calc(var(--grc18-6)  * 1px) + calc(var(--bsp) * 39)));
+    --tiny-1-8  : max(var(--tiny-1-1), calc(calc(var(--grc18-5)  * 1px) + calc(var(--bsp) * 46)));
+    --tiny-1-9  : max(var(--tiny-1-1), calc(calc(var(--grc18-4)  * 1px) + calc(var(--bsp) * 52)));
+    --tiny-1-10 : max(var(--tiny-1-1), calc(calc(var(--grc18-3)  * 1px) + calc(var(--bsp) * 59)));
+    --tiny-1-11 : max(var(--tiny-1-1), calc(calc(var(--grc18-2)  * 1px) + calc(var(--bsp) * 65)));
+    
+    --tiny-2-1  : calc(calc(var(--grc20-1)  * 1px) + var(--bsp));
+    --tiny-2-2  : max(var(--tiny-2-1), calc(calc(var(--grc19-11) * 1px) + calc(var(--bsp) * 11 )));
+    --tiny-2-3  : max(var(--tiny-2-1), calc(calc(var(--grc19-10) * 1px) + calc(var(--bsp) * 21 )));
+    --tiny-2-4  : max(var(--tiny-2-1), calc(calc(var(--grc19-9)  * 1px) + calc(var(--bsp) * 32 )));
+    --tiny-2-5  : max(var(--tiny-2-1), calc(calc(var(--grc19-8)  * 1px) + calc(var(--bsp) * 42 )));
+    --tiny-2-6  : max(var(--tiny-2-1), calc(calc(var(--grc19-7)  * 1px) + calc(var(--bsp) * 52 )));
+    --tiny-2-7  : max(var(--tiny-2-1), calc(calc(var(--grc19-6)  * 1px) + calc(var(--bsp) * 64 )));
+    --tiny-2-8  : max(var(--tiny-2-1), calc(calc(var(--grc19-5)  * 1px) + calc(var(--bsp) * 74 )));
+    --tiny-2-9  : max(var(--tiny-2-1), calc(calc(var(--grc19-4)  * 1px) + calc(var(--bsp) * 84 )));
+    --tiny-2-10 : max(var(--tiny-2-1), calc(calc(var(--grc19-3)  * 1px) + calc(var(--bsp) * 95 )));
+    --tiny-2-11 : max(var(--tiny-2-1), calc(calc(var(--grc19-2)  * 1px) + calc(var(--bsp) * 105)));
+
+
+    /*tiny Scale Negative Values*/
+    --tiny-1-1-  : calc(0px - var(--tiny-1-1));   --tiny-1-2-  : calc(0px - var(--tiny-1-2));
+    --tiny-1-3-  : calc(0px - var(--tiny-1-3));   --tiny-1-4-  : calc(0px - var(--tiny-1-4));
+    --tiny-1-5-  : calc(0px - var(--tiny-1-5));   --tiny-1-6-  : calc(0px - var(--tiny-1-6));
+    --tiny-1-7-  : calc(0px - var(--tiny-1-7));   --tiny-1-8-  : calc(0px - var(--tiny-1-8));
+    --tiny-1-9-  : calc(0px - var(--tiny-1-9));   --tiny-1-10- : calc(0px - var(--tiny-1-10));
+    --tiny-1-11- : calc(0px - var(--tiny-1-11));
+    
+    --tiny-2-1-  : calc(0px - var(--tiny-2-1));   --tiny-2-2-  : calc(0px - var(--tiny-2-2));
+    --tiny-2-3-  : calc(0px - var(--tiny-2-3));   --tiny-2-4-  : calc(0px - var(--tiny-2-4));
+    --tiny-2-5-  : calc(0px - var(--tiny-2-5));   --tiny-2-6-  : calc(0px - var(--tiny-2-6));
+    --tiny-2-7-  : calc(0px - var(--tiny-2-7));   --tiny-2-8-  : calc(0px - var(--tiny-2-8));
+    --tiny-2-9-  : calc(0px - var(--tiny-2-9));   --tiny-2-10- : calc(0px - var(--tiny-2-10));
+    --tiny-2-11- : calc(0px - var(--tiny-2-11));
+    
+    
+    
+    /*X Small Scale*/
+    --xSmall-1-1  : calc(calc(var(--grc20-6)  * 1px) + var(--bsp));
+    --xSmall-1-2  : max(var(--xSmall-1-1), calc(calc(var(--grc20-5)  * 1px) + calc(var(--bsp) * 17 )));
+    --xSmall-1-3  : max(var(--xSmall-1-1), calc(calc(var(--grc20-4)  * 1px) + calc(var(--bsp) * 33 )));
+    --xSmall-1-4  : max(var(--xSmall-1-1), calc(calc(var(--grc20-3)  * 1px) + calc(var(--bsp) * 50 )));
+    --xSmall-1-5  : max(var(--xSmall-1-1), calc(calc(var(--grc20-2)  * 1px) + calc(var(--bsp) * 67 )));
+    --xSmall-1-6  : max(var(--xSmall-1-1), calc(calc(var(--grc20-1)  * 1px) + calc(var(--bsp) * 84 )));
+    --xSmall-1-7  : max(var(--xSmall-1-1), calc(calc(var(--grc19-11) * 1px) + calc(var(--bsp) * 95 )));
+    --xSmall-1-8  : max(var(--xSmall-1-1), calc(calc(var(--grc19-10) * 1px) + calc(var(--bsp) * 105)));
+    --xSmall-1-9  : max(var(--xSmall-1-1), calc(calc(var(--grc19-9)  * 1px) + calc(var(--bsp) * 115)));
+    --xSmall-1-10 : max(var(--xSmall-1-1), calc(calc(var(--grc19-8)  * 1px) + calc(var(--bsp) * 125)));
+    --xSmall-1-11 : max(var(--xSmall-1-1), calc(calc(var(--grc19-7)  * 1px) + calc(var(--bsp) * 136)));
+    
+    --xSmall-2-1  : calc(calc(var(--grc21-1)  * 1px) + var(--bsp));
+    --xSmall-2-2  : max(var(--xSmall-2-1), calc(calc(var(--grc20-11) * 1px) + calc(var(--bsp) * 14 )));
+    --xSmall-2-3  : max(var(--xSmall-2-1), calc(calc(var(--grc20-10) * 1px) + calc(var(--bsp) * 28 )));
+    --xSmall-2-4  : max(var(--xSmall-2-1), calc(calc(var(--grc20-9)  * 1px) + calc(var(--bsp) * 42 )));
+    --xSmall-2-5  : max(var(--xSmall-2-1), calc(calc(var(--grc20-8)  * 1px) + calc(var(--bsp) * 56 )));
+    --xSmall-2-6  : max(var(--xSmall-2-1), calc(calc(var(--grc20-7)  * 1px) + calc(var(--bsp) * 68 )));
+    --xSmall-2-7  : max(var(--xSmall-2-1), calc(calc(var(--grc20-6)  * 1px) + calc(var(--bsp) * 86 )));
+    --xSmall-2-8  : max(var(--xSmall-2-1), calc(calc(var(--grc20-5)  * 1px) + calc(var(--bsp) * 99 )));
+    --xSmall-2-9  : max(var(--xSmall-2-1), calc(calc(var(--grc20-4)  * 1px) + calc(var(--bsp) * 113)));
+    --xSmall-2-10 : max(var(--xSmall-2-1), calc(calc(var(--grc20-3)  * 1px) + calc(var(--bsp) * 127)));
+    --xSmall-2-11 : max(var(--xSmall-2-1), calc(calc(var(--grc20-2)  * 1px) + calc(var(--bsp) * 141)));
+    
+
+    /*xSmall Scale Negative Values*/
+    --xSmall-1-1-  : calc(0px - var(--xSmall-1-1));   --xSmall-1-2-  : calc(0px - var(--xSmall-1-2));
+    --xSmall-1-3-  : calc(0px - var(--xSmall-1-3));   --xSmall-1-4-  : calc(0px - var(--xSmall-1-4));
+    --xSmall-1-5-  : calc(0px - var(--xSmall-1-5));   --xSmall-1-6-  : calc(0px - var(--xSmall-1-6));
+    --xSmall-1-7-  : calc(0px - var(--xSmall-1-7));   --xSmall-1-8-  : calc(0px - var(--xSmall-1-8));
+    --xSmall-1-9-  : calc(0px - var(--xSmall-1-9));   --xSmall-1-10- : calc(0px - var(--xSmall-1-10));
+    --xSmall-1-11- : calc(0px - var(--xSmall-1-11));
+    
+    --xSmall-2-1-  : calc(0px - var(--xSmall-2-1));   --xSmall-2-2-  : calc(0px - var(--xSmall-2-2));
+    --xSmall-2-3-  : calc(0px - var(--xSmall-2-3));   --xSmall-2-4-  : calc(0px - var(--xSmall-2-4));
+    --xSmall-2-5-  : calc(0px - var(--xSmall-2-5));   --xSmall-2-6-  : calc(0px - var(--xSmall-2-6));
+    --xSmall-2-7-  : calc(0px - var(--xSmall-2-7));   --xSmall-2-8-  : calc(0px - var(--xSmall-2-8));
+    --xSmall-2-9-  : calc(0px - var(--xSmall-2-9));   --xSmall-2-10- : calc(0px - var(--xSmall-2-10));
+    --xSmall-2-11- : calc(0px - var(--xSmall-2-11));
+    
+
+    
+    /*Small Scale*/
+    --small-1-1  : calc(calc(var(--grc21-6)  * 1px) + var(--bsp));
+    --small-1-2  : max(var(--small-1-1), calc(calc(var(--grc21-5)  * 1px) + calc(var(--bsp) * 17 )));
+    --small-1-3  : max(var(--small-1-1), calc(calc(var(--grc21-4)  * 1px) + calc(var(--bsp) * 33 )));
+    --small-1-4  : max(var(--small-1-1), calc(calc(var(--grc21-3)  * 1px) + calc(var(--bsp) * 49 )));
+    --small-1-5  : max(var(--small-1-1), calc(calc(var(--grc21-2)  * 1px) + calc(var(--bsp) * 66 )));
+    --small-1-6  : max(var(--small-1-1), calc(calc(var(--grc21-1)  * 1px) + calc(var(--bsp) * 82 )));
+    --small-1-7  : max(var(--small-1-1), calc(calc(var(--grc20-11) * 1px) + calc(var(--bsp) * 92 )));
+    --small-1-8  : max(var(--small-1-1), calc(calc(var(--grc20-10) * 1px) + calc(var(--bsp) * 102)));
+    --small-1-9  : max(var(--small-1-1), calc(calc(var(--grc20-9)  * 1px) + calc(var(--bsp) * 112)));
+    --small-1-10 : max(var(--small-1-1), calc(calc(var(--grc20-8)  * 1px) + calc(var(--bsp) * 122)));
+    --small-1-11 : max(var(--small-1-1), calc(calc(var(--grc20-7)  * 1px) + calc(var(--bsp) * 133)));
+    
+    --small-2-1  : calc(calc(var(--grc22-1)  * 1px) + var(--bsp));
+    --small-2-2  : max(var(--small-2-1), calc(calc(var(--grc21-11) * 1px) + calc(var(--bsp) * 14 )));
+    --small-2-3  : max(var(--small-2-1), calc(calc(var(--grc21-10) * 1px) + calc(var(--bsp) * 27 )));
+    --small-2-4  : max(var(--small-2-1), calc(calc(var(--grc21-9)  * 1px) + calc(var(--bsp) * 40 )));
+    --small-2-5  : max(var(--small-2-1), calc(calc(var(--grc21-8)  * 1px) + calc(var(--bsp) * 53 )));
+    --small-2-6  : max(var(--small-2-1), calc(calc(var(--grc21-7)  * 1px) + calc(var(--bsp) * 66 )));
+    --small-2-7  : max(var(--small-2-1), calc(calc(var(--grc21-6)  * 1px) + calc(var(--bsp) * 80 )));
+    --small-2-8  : max(var(--small-2-1), calc(calc(var(--grc21-5)  * 1px) + calc(var(--bsp) * 93 )));
+    --small-2-9  : max(var(--small-2-1), calc(calc(var(--grc21-4)  * 1px) + calc(var(--bsp) * 106)));
+    --small-2-10 : max(var(--small-2-1), calc(calc(var(--grc21-3)  * 1px) + calc(var(--bsp) * 119)));
+    --small-2-11 : max(var(--small-2-1), calc(calc(var(--grc21-2)  * 1px) + calc(var(--bsp) * 132)));
+    
+
+    /*small Scale Negative Values*/
+    --small-1-1-  : calc(0px - var(--small-1-1));   --small-1-2-  : calc(0px - var(--small-1-2));
+    --small-1-3-  : calc(0px - var(--small-1-3));   --small-1-4-  : calc(0px - var(--small-1-4));
+    --small-1-5-  : calc(0px - var(--small-1-5));   --small-1-6-  : calc(0px - var(--small-1-6));
+    --small-1-7-  : calc(0px - var(--small-1-7));   --small-1-8-  : calc(0px - var(--small-1-8));
+    --small-1-9-  : calc(0px - var(--small-1-9));   --small-1-10- : calc(0px - var(--small-1-10));
+    --small-1-11- : calc(0px - var(--small-1-11));
+    
+    --small-2-1-  : calc(0px - var(--small-2-1));   --small-2-2-  : calc(0px - var(--small-2-2));
+    --small-2-3-  : calc(0px - var(--small-2-3));   --small-2-4-  : calc(0px - var(--small-2-4));
+    --small-2-5-  : calc(0px - var(--small-2-5));   --small-2-6-  : calc(0px - var(--small-2-6));
+    --small-2-7-  : calc(0px - var(--small-2-7));   --small-2-8-  : calc(0px - var(--small-2-8));
+    --small-2-9-  : calc(0px - var(--small-2-9));   --small-2-10- : calc(0px - var(--small-2-10));
+    --small-2-11- : calc(0px - var(--small-2-11));
+    
+
+    
+    /*Low Medium Scale*/
+    --loMed-1-1  : calc(calc(var(--grc22-6)  * 1px) + var(--bsp));
+    --loMed-1-2  : max(var(--loMed-1-1), calc(calc(var(--grc22-5)  * 1px) + calc(var(--bsp) * 19 )));
+    --loMed-1-3  : max(var(--loMed-1-1), calc(calc(var(--grc22-4)  * 1px) + calc(var(--bsp) * 36 )));
+    --loMed-1-4  : max(var(--loMed-1-1), calc(calc(var(--grc22-3)  * 1px) + calc(var(--bsp) * 54 )));
+    --loMed-1-5  : max(var(--loMed-1-1), calc(calc(var(--grc22-2)  * 1px) + calc(var(--bsp) * 72 )));
+    --loMed-1-6  : max(var(--loMed-1-1), calc(calc(var(--grc21-11) * 1px) + calc(var(--bsp) * 100)));
+    --loMed-1-7  : max(var(--loMed-1-1), calc(calc(var(--grc21-10) * 1px) + calc(var(--bsp) * 111)));
+    --loMed-1-8  : max(var(--loMed-1-1), calc(calc(var(--grc21-9)  * 1px) + calc(var(--bsp) * 122)));
+    --loMed-1-9  : max(var(--loMed-1-1), calc(calc(var(--grc21-8)  * 1px) + calc(var(--bsp) * 130)));
+    --loMed-1-10 : max(var(--loMed-1-1), calc(calc(var(--grc21-7)  * 1px) + calc(var(--bsp) * 143)));
+    --loMed-1-11 : max(var(--loMed-1-1), calc(calc(var(--grc21-6)  * 1px) + calc(var(--bsp) * 154)));
+    
+    --loMed-2-1  : calc(calc(var(--grc23-1)  * 1px) + var(--bsp));
+    --loMed-2-2  : max(var(--loMed-2-1), calc(calc(var(--grc22-11) * 1px) + calc(var(--bsp) * 16 )));
+    --loMed-2-3  : max(var(--loMed-2-1), calc(calc(var(--grc22-10) * 1px) + calc(var(--bsp) * 31 )));
+    --loMed-2-4  : max(var(--loMed-2-1), calc(calc(var(--grc22-9)  * 1px) + calc(var(--bsp) * 46 )));
+    --loMed-2-5  : max(var(--loMed-2-1), calc(calc(var(--grc22-8)  * 1px) + calc(var(--bsp) * 61 )));
+    --loMed-2-6  : max(var(--loMed-2-1), calc(calc(var(--grc22-7)  * 1px) + calc(var(--bsp) * 76 )));
+    --loMed-2-7  : max(var(--loMed-2-1), calc(calc(var(--grc22-6)  * 1px) + calc(var(--bsp) * 93 )));
+    --loMed-2-8  : max(var(--loMed-2-1), calc(calc(var(--grc22-5)  * 1px) + calc(var(--bsp) * 108)));
+    --loMed-2-9  : max(var(--loMed-2-1), calc(calc(var(--grc22-4)  * 1px) + calc(var(--bsp) * 123)));
+    --loMed-2-10 : max(var(--loMed-2-1), calc(calc(var(--grc22-3)  * 1px) + calc(var(--bsp) * 138)));
+    --loMed-2-11 : max(var(--loMed-2-1), calc(calc(var(--grc22-2)  * 1px) + calc(var(--bsp) * 153)));
+
+
+    /*loMed Scale Negative Values*/
+    --loMed-1-1-  : calc(0px - var(--loMed-1-1));   --loMed-1-2-  : calc(0px - var(--loMed-1-2));
+    --loMed-1-3-  : calc(0px - var(--loMed-1-3));   --loMed-1-4-  : calc(0px - var(--loMed-1-4));
+    --loMed-1-5-  : calc(0px - var(--loMed-1-5));   --loMed-1-6-  : calc(0px - var(--loMed-1-6));
+    --loMed-1-7-  : calc(0px - var(--loMed-1-7));   --loMed-1-8-  : calc(0px - var(--loMed-1-8));
+    --loMed-1-9-  : calc(0px - var(--loMed-1-9));   --loMed-1-10- : calc(0px - var(--loMed-1-10));
+    --loMed-1-11- : calc(0px - var(--loMed-1-11));
+    
+    --loMed-2-1-  : calc(0px - var(--loMed-2-1));   --loMed-2-2-  : calc(0px - var(--loMed-2-2));
+    --loMed-2-3-  : calc(0px - var(--loMed-2-3));   --loMed-2-4-  : calc(0px - var(--loMed-2-4));
+    --loMed-2-5-  : calc(0px - var(--loMed-2-5));   --loMed-2-6-  : calc(0px - var(--loMed-2-6));
+    --loMed-2-7-  : calc(0px - var(--loMed-2-7));   --loMed-2-8-  : calc(0px - var(--loMed-2-8));
+    --loMed-2-9-  : calc(0px - var(--loMed-2-9));   --loMed-2-10- : calc(0px - var(--loMed-2-10));
+    --loMed-2-11- : calc(0px - var(--loMed-2-11));
+    
+    
+    
+    /*High Medium Scale*/
+    --hiMed-1-1  : calc(calc(var(--grc24-1)  * 1px) + var(--bsp));
+    --hiMed-1-2  : max(var(--hiMed-1-1), calc(calc(var(--grc23-11) * 1px) + calc(var(--bsp) * 17 )));
+    --hiMed-1-3  : max(var(--hiMed-1-1), calc(calc(var(--grc23-10) * 1px) + calc(var(--bsp) * 32 )));
+    --hiMed-1-4  : max(var(--hiMed-1-1), calc(calc(var(--grc23-9)  * 1px) + calc(var(--bsp) * 48 )));
+    --hiMed-1-5  : max(var(--hiMed-1-1), calc(calc(var(--grc23-8)  * 1px) + calc(var(--bsp) * 63 )));
+    --hiMed-1-6  : max(var(--hiMed-1-1), calc(calc(var(--grc23-7)  * 1px) + calc(var(--bsp) * 79 )));
+    --hiMed-1-7  : max(var(--hiMed-1-1), calc(calc(var(--grc23-6)  * 1px) + calc(var(--bsp) * 96 )));
+    --hiMed-1-8  : max(var(--hiMed-1-1), calc(calc(var(--grc23-5)  * 1px) + calc(var(--bsp) * 111)));
+    --hiMed-1-9  : max(var(--hiMed-1-1), calc(calc(var(--grc23-4)  * 1px) + calc(var(--bsp) * 127)));
+    --hiMed-1-10 : max(var(--hiMed-1-1), calc(calc(var(--grc23-3)  * 1px) + calc(var(--bsp) * 142)));
+    --hiMed-1-11 : max(var(--hiMed-1-1), calc(calc(var(--grc23-2)  * 1px) + calc(var(--bsp) * 158)));
+    
+    --hiMed-2-1  : calc(calc(var(--grc25-1)  * 1px) + var(--bsp));
+    --hiMed-2-2  : max(var(--hiMed-2-1), calc(calc(var(--grc24-11) * 1px) + calc(var(--bsp) * 16 )));
+    --hiMed-2-3  : max(var(--hiMed-2-1), calc(calc(var(--grc24-10) * 1px) + calc(var(--bsp) * 31 )));
+    --hiMed-2-4  : max(var(--hiMed-2-1), calc(calc(var(--grc24-9)  * 1px) + calc(var(--bsp) * 47 )));
+    --hiMed-2-5  : max(var(--hiMed-2-1), calc(calc(var(--grc24-8)  * 1px) + calc(var(--bsp) * 62 )));
+    --hiMed-2-6  : max(var(--hiMed-2-1), calc(calc(var(--grc24-7)  * 1px) + calc(var(--bsp) * 77 )));
+    --hiMed-2-7  : max(var(--hiMed-2-1), calc(calc(var(--grc24-6)  * 1px) + calc(var(--bsp) * 94 )));
+    --hiMed-2-8  : max(var(--hiMed-2-1), calc(calc(var(--grc24-5)  * 1px) + calc(var(--bsp) * 110)));
+    --hiMed-2-9  : max(var(--hiMed-2-1), calc(calc(var(--grc24-4)  * 1px) + calc(var(--bsp) * 125)));
+    --hiMed-2-10 : max(var(--hiMed-2-1), calc(calc(var(--grc24-3)  * 1px) + calc(var(--bsp) * 140)));
+    --hiMed-2-11 : max(var(--hiMed-2-1), calc(calc(var(--grc24-2)  * 1px) + calc(var(--bsp) * 156)));
+    
+
+    /*hiMed Scale Negative Values*/
+    --hiMed-1-1-  : calc(0px - var(--hiMed-1-1));   --hiMed-1-2-  : calc(0px - var(--hiMed-1-2));
+    --hiMed-1-3-  : calc(0px - var(--hiMed-1-3));   --hiMed-1-4-  : calc(0px - var(--hiMed-1-4));
+    --hiMed-1-5-  : calc(0px - var(--hiMed-1-5));   --hiMed-1-6-  : calc(0px - var(--hiMed-1-6));
+    --hiMed-1-7-  : calc(0px - var(--hiMed-1-7));   --hiMed-1-8-  : calc(0px - var(--hiMed-1-8));
+    --hiMed-1-9-  : calc(0px - var(--hiMed-1-9));   --hiMed-1-10- : calc(0px - var(--hiMed-1-10));
+    --hiMed-1-11- : calc(0px - var(--hiMed-1-11));
+    
+    --hiMed-2-1-  : calc(0px - var(--loMed-2-1));   --hiMed-2-2-  : calc(0px - var(--hiMed-2-2));
+    --hiMed-2-3-  : calc(0px - var(--hiMed-2-3));   --hiMed-2-4-  : calc(0px - var(--hiMed-2-4));
+    --hiMed-2-5-  : calc(0px - var(--hiMed-2-5));   --hiMed-2-6-  : calc(0px - var(--hiMed-2-6));
+    --hiMed-2-7-  : calc(0px - var(--hiMed-2-7));   --hiMed-2-8-  : calc(0px - var(--hiMed-2-8));
+    --hiMed-2-9-  : calc(0px - var(--hiMed-2-9));   --hiMed-2-10- : calc(0px - var(--hiMed-2-10));
+    --hiMed-2-11- : calc(0px - var(--hiMed-2-11));
+    
+    
+    
+    /*Large Scale*/
+    --large-1-1  : calc(calc(var(--grc25-6)  * 1px) + var(--bsp));
+    --large-1-2  : max(var(--large-1-1), calc(calc(var(--grc25-5)  * 1px) + calc(var(--bsp) * 21 )));
+    --large-1-3  : max(var(--large-1-1), calc(calc(var(--grc25-4)  * 1px) + calc(var(--bsp) * 41 )));
+    --large-1-4  : max(var(--large-1-1), calc(calc(var(--grc25-3)  * 1px) + calc(var(--bsp) * 61 )));
+    --large-1-5  : max(var(--large-1-1), calc(calc(var(--grc25-2)  * 1px) + calc(var(--bsp) * 81 )));
+    --large-1-6  : max(var(--large-1-1), calc(calc(var(--grc25-1)  * 1px) + calc(var(--bsp) * 101)));
+    --large-1-7  : max(var(--large-1-1), calc(calc(var(--grc24-11) * 1px) + calc(var(--bsp) * 113)));
+    --large-1-8  : max(var(--large-1-1), calc(calc(var(--grc24-10) * 1px) + calc(var(--bsp) * 125)));
+    --large-1-9  : max(var(--large-1-1), calc(calc(var(--grc24-9)  * 1px) + calc(var(--bsp) * 138)));
+    --large-1-10 : max(var(--large-1-1), calc(calc(var(--grc24-8)  * 1px) + calc(var(--bsp) * 150)));
+    --large-1-11 : max(var(--large-1-1), calc(calc(var(--grc24-7)  * 1px) + calc(var(--bsp) * 162)));
+    
+    --large-2-1  : calc(calc(var(--grc26-1)  * 1px) + var(--bsp));
+    --large-2-2  : max(var(--large-2-1), calc(calc(var(--grc25-11) * 1px) + calc(var(--bsp) * 16 )));
+    --large-2-3  : max(var(--large-2-1), calc(calc(var(--grc25-10) * 1px) + calc(var(--bsp) * 31 )));
+    --large-2-4  : max(var(--large-2-1), calc(calc(var(--grc25-9)  * 1px) + calc(var(--bsp) * 46 )));
+    --large-2-5  : max(var(--large-2-1), calc(calc(var(--grc25-8)  * 1px) + calc(var(--bsp) * 61 )));
+    --large-2-6  : max(var(--large-2-1), calc(calc(var(--grc25-7)  * 1px) + calc(var(--bsp) * 75 )));
+    --large-2-7  : max(var(--large-2-1), calc(calc(var(--grc25-6)  * 1px) + calc(var(--bsp) * 92 )));
+    --large-2-8  : max(var(--large-2-1), calc(calc(var(--grc25-5)  * 1px) + calc(var(--bsp) * 106)));
+    --large-2-9  : max(var(--large-2-1), calc(calc(var(--grc25-4)  * 1px) + calc(var(--bsp) * 121)));
+    --large-2-10 : max(var(--large-2-1), calc(calc(var(--grc25-3)  * 1px) + calc(var(--bsp) * 136)));
+    --large-2-11 : max(var(--large-2-1), calc(calc(var(--grc25-2)  * 1px) + calc(var(--bsp) * 150)));
+    
+
+    /*large Scale Negative Values*/
+    --large-1-1-  : calc(0px - var(--large-1-1));   --large-1-2-  : calc(0px - var(--large-1-2));
+    --large-1-3-  : calc(0px - var(--large-1-3));   --large-1-4-  : calc(0px - var(--large-1-4));
+    --large-1-5-  : calc(0px - var(--large-1-5));   --large-1-6-  : calc(0px - var(--large-1-6));
+    --large-1-7-  : calc(0px - var(--large-1-7));   --large-1-8-  : calc(0px - var(--large-1-8));
+    --large-1-9-  : calc(0px - var(--large-1-9));   --large-1-10- : calc(0px - var(--large-1-10));
+    --large-1-11- : calc(0px - var(--large-1-11));
+    
+    --large-2-1-  : calc(0px - var(--large-2-1));   --large-2-2-  : calc(0px - var(--large-2-2));
+    --large-2-3-  : calc(0px - var(--large-2-3));   --large-2-4-  : calc(0px - var(--large-2-4));
+    --large-2-5-  : calc(0px - var(--large-2-5));   --large-2-6-  : calc(0px - var(--large-2-6));
+    --large-2-7-  : calc(0px - var(--large-2-7));   --large-2-8-  : calc(0px - var(--large-2-8));
+    --large-2-9-  : calc(0px - var(--large-2-9));   --large-2-10- : calc(0px - var(--large-2-10));
+    --large-2-11- : calc(0px - var(--large-2-11));
+    
+    
+    
+    /*Jumbo Scale*/
+    --jumbo-1-1  : calc(calc(var(--grc26-6)  * 1px) + var(--bsp));
+    --jumbo-1-2  : max(var(--jumbo-1-1), calc(calc(var(--grc26-5)  * 1px) + calc(var(--bsp) * 21 )));
+    --jumbo-1-3  : max(var(--jumbo-1-1), calc(calc(var(--grc26-4)  * 1px) + calc(var(--bsp) * 41 )));
+    --jumbo-1-4  : max(var(--jumbo-1-1), calc(calc(var(--grc26-3)  * 1px) + calc(var(--bsp) * 61 )));
+    --jumbo-1-5  : max(var(--jumbo-1-1), calc(calc(var(--grc26-2)  * 1px) + calc(var(--bsp) * 81 )));
+    --jumbo-1-6  : max(var(--jumbo-1-1), calc(calc(var(--grc26-1)  * 1px) + calc(var(--bsp) * 101)));
+    --jumbo-1-7  : max(var(--jumbo-1-1), calc(calc(var(--grc25-11) * 1px) + calc(var(--bsp) * 113)));
+    --jumbo-1-8  : max(var(--jumbo-1-1), calc(calc(var(--grc25-10) * 1px) + calc(var(--bsp) * 126)));
+    --jumbo-1-9  : max(var(--jumbo-1-1), calc(calc(var(--grc25-9)  * 1px) + calc(var(--bsp) * 138)));
+    --jumbo-1-10 : max(var(--jumbo-1-1), calc(calc(var(--grc25-8)  * 1px) + calc(var(--bsp) * 150)));
+    --jumbo-1-11 : max(var(--jumbo-1-1), calc(calc(var(--grc25-7)  * 1px) + calc(var(--bsp) * 163)));
+    
+    --jumbo-2-1  : calc(calc(var(--grc27-1)  * 1px) + var(--bsp));
+    --jumbo-2-2  : max(var(--jumbo-2-1), calc(calc(var(--grc26-11) * 1px) + calc(var(--bsp) * 16 )));
+    --jumbo-2-3  : max(var(--jumbo-2-1), calc(calc(var(--grc26-10) * 1px) + calc(var(--bsp) * 32 )));
+    --jumbo-2-4  : max(var(--jumbo-2-1), calc(calc(var(--grc26-9)  * 1px) + calc(var(--bsp) * 48 )));
+    --jumbo-2-5  : max(var(--jumbo-2-1), calc(calc(var(--grc26-8)  * 1px) + calc(var(--bsp) * 64 )));
+    --jumbo-2-6  : max(var(--jumbo-2-1), calc(calc(var(--grc26-7)  * 1px) + calc(var(--bsp) * 79 )));
+    --jumbo-2-7  : max(var(--jumbo-2-1), calc(calc(var(--grc26-6)  * 1px) + calc(var(--bsp) * 96 )));
+    --jumbo-2-8  : max(var(--jumbo-2-1), calc(calc(var(--grc26-5)  * 1px) + calc(var(--bsp) * 112)));
+    --jumbo-2-9  : max(var(--jumbo-2-1), calc(calc(var(--grc26-4)  * 1px) + calc(var(--bsp) * 128)));
+    --jumbo-2-10 : max(var(--jumbo-2-1), calc(calc(var(--grc26-3)  * 1px) + calc(var(--bsp) * 144)));
+    --jumbo-2-11 : max(var(--jumbo-2-1), calc(calc(var(--grc26-2)  * 1px) + calc(var(--bsp) * 160)));
+
+
+    /*jumbo Scale Negative Values*/
+    --jumbo-1-1-  : calc(0px - var(--jumbo-1-1));   --jumbo-1-2-  : calc(0px - var(--jumbo-1-2));
+    --jumbo-1-3-  : calc(0px - var(--jumbo-1-3));   --jumbo-1-4-  : calc(0px - var(--jumbo-1-4));
+    --jumbo-1-5-  : calc(0px - var(--jumbo-1-5));   --jumbo-1-6-  : calc(0px - var(--jumbo-1-6));
+    --jumbo-1-7-  : calc(0px - var(--jumbo-1-7));   --jumbo-1-8-  : calc(0px - var(--jumbo-1-8));
+    --jumbo-1-9-  : calc(0px - var(--jumbo-1-9));   --jumbo-1-10- : calc(0px - var(--jumbo-1-10));
+    --jumbo-1-11- : calc(0px - var(--jumbo-1-11));
+    
+    --jumbo-2-1-  : calc(0px - var(--jumbo-2-1));   --jumbo-2-2-  : calc(0px - var(--jumbo-2-2));
+    --jumbo-2-3-  : calc(0px - var(--jumbo-2-3));   --jumbo-2-4-  : calc(0px - var(--jumbo-2-4));
+    --jumbo-2-5-  : calc(0px - var(--jumbo-2-5));   --jumbo-2-6-  : calc(0px - var(--jumbo-2-6));
+    --jumbo-2-7-  : calc(0px - var(--jumbo-2-7));   --jumbo-2-8-  : calc(0px - var(--jumbo-2-8));
+    --jumbo-2-9-  : calc(0px - var(--jumbo-2-9));   --jumbo-2-10- : calc(0px - var(--jumbo-2-10));
+    --jumbo-2-11- : calc(0px - var(--jumbo-2-11));
+}
