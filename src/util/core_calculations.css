@@ -1,0 +1,15 @@
+:root{
+    /*core width*/
+    --coreWidth     : calc(100vw / 33);
+    --coreWscaleDwn : calc(var(--coreWidth) / var(--grcWhole));
+    
+    /*core height*/
+    --coreHeight    : calc(calc(100vh / 33) / var(--grcWhole));
+    --coreHscaleDwn : calc(var(--coreHeight) / var(--grcWhole));
+    
+    /*core cell*/
+    --whJoin : calc(var(--coreHscaleDwn) + var(--coreWscaleDwn));
+    
+    /*--whJoin: calc(var(--coreWscaleDwn) * 2);*/
+    --whScaleDwn: calc(var(--whJoin) / var(--grcWhole));
+}

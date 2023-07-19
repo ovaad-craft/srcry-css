@@ -1,0 +1,267 @@
+.srcryBox{
+    /*--------------------- User Settings ---------------------*/
+
+
+    /* Width Settings */
+
+    --crushGap-w : var(--bsp);
+    --crushGap-w-nudge-slice: 0;
+    --crushGap-w-nudge-chunk: 0;
+
+    --baseSize-w             : unset;
+    --baseSize-w-nudge-slice : 0;
+    --baseSize-w-nudge-chunk : 0;
+
+    
+    --edgeChase-w             : var(--crushGap-w);
+    --edgeChase-w-nudge-slice : 0;
+    --edgeChase-w-nudge-chunk : 0;
+    
+    
+    --chaseStop-w             : var(--BaseSize-w-master);
+    --chaseStop-w-nudge-slice : 0;
+    --chaseStop-w-nudge-chunk : 0;
+    
+    
+    --squishGrowth-w-start           : 1px;
+    --squishGrowth-w-speed           : 0;
+    --squishGrowth-w-max             : var(--micro-1-1);
+    --squishGrowth-w-max-nudge-slice : 0;
+    --squishGrowth-w-max-nudge-chunk : 0;
+    
+    --stretchShrink-w-start           : 1px;
+    --stretchShrink-w-speed           : 0;
+    --stretchShrink-w-min             : var(--ChaseStopToggle-w);
+    --stretchShrink-w-min-nudge-slice : 0;
+    --stretchShrink-w-min-nudge-chunk : 0;
+
+    
+    
+    /* Height Settings */
+    
+    --crushGap-h : var(--bsp);
+    --crushGap-h-nudge-slice: 0;
+    --crushGap-h-nudge-chunk: 0;
+    
+    --baseSize-h             : unset;
+    --baseSize-h-nudge-slice : 0;
+    --baseSize-h-nudge-chunk : 0;
+    
+    
+    --edgeChase-h             : var(--crushGap-h);
+    --edgeChase-h-nudge-slice : 0;
+    --edgeChase-h-nudge-chunk : 0;
+    
+    
+    --chaseStop-h             : var(--BaseSize-h-master);
+    --chaseStop-h-nudge-slice : 0;
+    --chaseStop-h-nudge-chunk : 0;
+    
+    
+    --squishGrowth-h-start           : 1px;
+    --squishGrowth-h-speed           : 0;
+    --squishGrowth-h-max             : var(--micro-1-1);
+    --squishGrowth-h-max-nudge-slice : 0;
+    --squishGrowth-h-max-nudge-chunk : 0;
+    
+    
+    --stretchShrink-h-start           : 1px;
+    --stretchShrink-h-speed           : 0;
+    --stretchShrink-h-min             : var(--ChaseStopToggle-h);
+    --stretchShrink-h-min-nudge-slice : 0;
+    --stretchShrink-h-min-nudge-chunk : 0;
+    
+    
+    
+    --bleed-scale : var(--bsp);
+    --bleed-amt   : 1;
+
+
+
+    /*----------- Functionality -----------*/
+
+    
+    /* Nudge Equations */
+
+    --CrushGap-W-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--crushGap-w-nudge-slice));
+    --CrushGap-W-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--crushGap-w-nudge-chunk));
+
+    --CrushGap-W-NudgeMaster        : calc(var(--CrushGap-W-NudgeSliceEquation) + var(--CrushGap-W-NudgeChunkEquation));
+
+
+    --BaseSize-W-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--baseSize-w-nudge-slice));
+    --BaseSize-W-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--baseSize-w-nudge-chunk));
+
+    --BaseSize-W-NudgeMaster        : calc(var(--BaseSize-W-NudgeSliceEquation) + var(--BaseSize-W-NudgeChunkEquation));
+    
+
+
+    --EdgeChase-W-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--edgeChase-w-nudge-slice));
+    --EdgeChase-W-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--edgeChase-w-nudge-chunk));
+
+    --EdgeChase-W-NudgeMaster        : calc(var(--EdgeChase-W-NudgeSliceEquation) + var(--EdgeChase-W-NudgeChunkEquation));
+    
+
+
+    --ChaseStop-W-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--chaseStop-w-nudge-slice));
+    --ChaseStop-W-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--chaseStop-w-nudge-chunk));
+
+    --ChaseStop-W-NudgeMaster        : calc(var(--ChaseStop-W-NudgeSliceEquation) + var(--ChaseStop-W-NudgeChunkEquation));
+
+
+
+    --SquishGrowth-W-Max-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--squishGrowth-w-max-nudge-slice));
+    --SquishGrowth-W-Max-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--squishGrowth-w-max-nudge-chunk));
+
+    --SquishGrowth-W-Max-NudgeMaster        : calc(var(--SquishGrowth-W-Max-NudgeSliceEquation) + var(--SquishGrowth-W-Max-NudgeChunkEquation));
+    
+
+
+    --StretchShrink-W-Min-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--stretchShrink-w-min-nudge-slice));
+    --StretchShrink-W-Min-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--stretchShrink-w-min-nudge-chunk));
+
+    --StretchShrink-W-Min-NudgeMaster        : calc(var(--StretchShrink-W-Min-NudgeSliceEquation) + var(--StretchShrink-W-Min-NudgeChunkEquation));
+    
+
+
+    
+    --CrushGap-H-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--crushGap-h-nudge-slice));
+    --CrushGap-H-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--crushGap-h-nudge-chunk));
+
+    --CrushGap-H-NudgeMaster        : calc(var(--CrushGap-H-NudgeSliceEquation) + var(--CrushGap-H-NudgeChunkEquation));
+
+
+    --BaseSize-H-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--baseSize-h-nudge-slice));
+    --BaseSize-H-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--baseSize-h-nudge-chunk));
+
+    --BaseSize-H-NudgeMaster        : calc(var(--BaseSize-H-NudgeSliceEquation) + var(--BaseSize-H-NudgeChunkEquation));
+    
+
+
+    --EdgeChase-H-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--edgeChase-h-nudge-slice));
+    --EdgeChase-H-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--edgeChase-h-nudge-chunk));
+
+    --EdgeChase-H-NudgeMaster        : calc(var(--EdgeChase-H-NudgeSliceEquation) + var(--EdgeChase-H-NudgeChunkEquation));
+    
+
+
+    --ChaseStop-H-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--chaseStop-h-nudge-slice));
+    --ChaseStop-H-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--chaseStop-h-nudge-chunk));
+    
+    --ChaseStop-H-NudgeMaster        : calc(var(--ChaseStop-H-NudgeSliceEquation) + var(--ChaseStop-H-NudgeChunkEquation));
+
+
+
+    --SquishGrowth-H-Max-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--squishGrowth-h-max-nudge-slice));
+    --SquishGrowth-H-Max-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--squishGrowth-h-max-nudge-chunk));
+    
+    --SquishGrowth-H-Max-NudgeMaster        : calc(var(--SquishGrowth-H-Max-NudgeSliceEquation) + var(--SquishGrowth-H-Max-NudgeChunkEquation));
+
+
+
+    --StretchShrink-H-Min-NudgeSliceEquation : calc(var(--nudgeSlice) * var(--stretchShrink-h-min-nudge-slice));
+    --StretchShrink-H-Min-NudgeChunkEquation : calc(var(--nudgeChunk) * var(--stretchShrink-h-min-nudge-chunk));
+
+    --StretchShrink-H-Min-NudgeMaster        : calc(var(--StretchShrink-H-Min-NudgeSliceEquation) + var(--StretchShrink-H-Min-NudgeChunkEquation));
+
+
+
+
+
+    
+
+    
+    /* Size Equations*/
+    --Crush-w-size     : calc(100% - calc(var(--crushGap-w) + var(--CrushGap-W-NudgeMaster)));
+    --EdgeChase-w-size : calc(100% - var(--edgeChase-w));
+    
+    --BaseSize-w-master  : calc(var(--baseSize-w)       + var(--BaseSize-W-NudgeMaster));
+    --EdgeChase-w-master : calc(var(--EdgeChase-w-size) - var(--EdgeChase-W-NudgeMaster));
+    --ChaseStop-w-master : calc(var(--chaseStop-w)      + var(--ChaseStop-W-NudgeMaster));
+    
+    --Crush-h-size     : calc(100vh - calc(var(--crushGap-h) + var(--CrushGap-H-NudgeMaster)));
+    --EdgeChase-h-size : calc(100vh - var(--edgeChase-h));
+    
+    --BaseSize-h-master  : calc(var(--baseSize-h)       + var(--BaseSize-H-NudgeMaster));
+    --EdgeChase-h-master : calc(var(--EdgeChase-h-size) - var(--EdgeChase-H-NudgeMaster));
+    --ChaseStop-h-master : calc(var(--chaseStop-h)      + var(--ChaseStop-H-NudgeMaster));
+
+
+
+    /* Scaling Togglers */
+    --CrushBaseToggle-w : min(var(--Crush-w-size),      var(--BaseSize-w-master));
+    --BaseChaseToggle-w : max(var(--CrushBaseToggle-w), var(--EdgeChase-w-master));
+    --ChaseStopToggle-w : min(var(--BaseChaseToggle-w), var(--ChaseStop-w-master));
+
+    --CrushBaseToggle-h : min(var(--Crush-h-size),      var(--BaseSize-h-master));
+    --BaseChaseToggle-h : max(var(--CrushBaseToggle-h), var(--EdgeChase-h-master));
+    --ChaseStopToggle-h : min(var(--BaseChaseToggle-h), var(--ChaseStop-h-master));
+
+
+    /* Squish Growth Equations */
+    --SquishCore-w         : calc(var(--squishGrowth-w-start) - 100vh);
+    --SquishChunk-w        : calc(var(--SquishCore-w)         / 11);
+    --SquishTotal-w        : calc(var(--SquishChunk-w)        * var(--squishGrowth-w-speed));
+    --SquishGrowthSize-w   : calc(var(--ChaseStopToggle-w)    + var(--SquishTotal-w));
+    
+    /*--SquishGrowthMaxNudgeEquation-w : calc(var(--squishGrowth-w-max-nudgeScale) * var(--squishGrowth-w-max-nudgeAmount));*/
+    --SquishGrowthMaxSize-w          : calc(var(--SquishTotal-w)                 + var(--SquishGrowth-W-Max-NudgeMaster));
+    
+    --SquishGrowthMaster-w : min(var(--SquishGrowthSize-w), var(--SquishGrowthMaxSize-w));
+
+    --SquishCore-h         : calc(var(--squishGrowth-h-start) - 100vw);
+    --SquishChunk-h        : calc(var(--SquishCore-h)         / 33);
+    --SquishTotal-h        : calc(var(--SquishChunk-h)        * var(--squishGrowth-h-speed));
+    --SquishGrowthSize-h   : calc(var(--ChaseStopToggle-h)    + var(--SquishTotal-h));
+
+    /*--SquishGrowthMaxNudgeEquation-h : calc(var(--squishGrowth-h-max-nudgeScale) * var(--squishGrowth-h-max-nudgeAmount));*/
+    --SquishGrowthMaxSize-h          : calc(var(--SquishTotal-h)                 + var(--SquishGrowth-H-Max-NudgeMaster));
+
+    --SquishGrowthMaster-h : min(var(--SquishGrowthSize-h), var(--squishGrowth-h-max));
+
+
+
+    /* Stretch Shrink Equations */
+    --StretchShrinkCore-w  : calc(100vh                      - var(--stretchShrink-w-start));
+    --StretchShrinkChunk-w : calc(var(--StretchShrinkCore-w) / 11);
+    --StretchShrinkTotal-w : calc(var(--StretchShrinkCore-w) * var(--stretchShrink-w-speed));
+    --StretchShrinkSize-w  : calc(var(--ChaseStopToggle-w)   - var(--StretchShrinkTotal-w));
+
+    /*--StretchShrinkMinNudgeEquation-w : calc(var(--stretchShrink-w-min-nudgeScale) * var(--stretchShrink-w-min-nudgeAmount));*/
+    --StretchShrinkMinEquation-w      : calc(var(--stretchShrink-w-min)            + var(--StretchShrink-W-Min-NudgeMaster));
+    
+    --StretchShrinkToggle-w           : min(var(--ChaseStopToggle-w),        var(--StretchShrinkSize-w));
+    --StretchShrinkMinToggle-w        : max(var(--StretchShrinkToggle-w),    var(--StretchShrinkMinEquation-w));
+    --StretchShrinkEquation-w         : min(var(--StretchShrinkMinToggle-w), var(--ChaseStopToggle-w));
+
+
+    
+    --StretchShrinkCore-h  : calc(100vw                      - var(--stretchShrink-h-start));
+    --StretchShrinkChunk-h : calc(var(--StretchShrinkCore-h) / 11);
+    --StretchShrinkTotal-h : calc(var(--StretchShrinkCore-h) * var(--stretchShrink-h-speed));
+    --StretchShrinkSize-h  : calc(var(--ChaseStopToggle-h)   - var(--StretchShrinkTotal-h));
+
+    /*--StretchShrinkMinNudgeEquation-h : calc(var(--stretchShrink-h-min-nudgeScale) * var(--stretchShrink-h-min-nudgeAmount));*/
+    --StretchShrinkMinEquation-h      : calc(var(--stretchShrink-h-min)            + var(--StretchShrink-H-Min-NudgeMaster));
+    
+    --StretchShrinkToggle-h           : min(var(--ChaseStopToggle-h),        var(--StretchShrinkSize-h));
+    --StretchShrinkMinToggle-h        : max(var(--StretchShrinkToggle-h),    var(--StretchShrinkMinEquation-h));
+    --StretchShrinkEquation-h         : min(var(--StretchShrinkMinToggle-h), var(--ChaseStopToggle-h));
+
+
+
+    /*Bleed Equation*/
+    --BleedMaster : calc(var(--bleed-scale) * var(--bleed-amt));
+
+    --WidthEquation  : clamp(var(--SquishGrowthMaster-w), var(--ChaseStopToggle-w), var(--StretchShrinkEquation-w));
+    --HeightEquation : clamp(var(--SquishGrowthMaster-h), var(--ChaseStopToggle-h), var(--StretchShrinkEquation-h));
+    
+
+    --WidthMaster  : calc(var(--WidthEquation)  - var(--BleedMaster));
+    --HeightMaster : calc(var(--HeightEquation) - var(--BleedMaster));
+
+
+
+    width  : var(--WidthMaster);
+    height : var(--HeightMaster);
+}

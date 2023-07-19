@@ -1,0 +1,34 @@
+.srcryTxt{
+    
+    /*---------- Text Properties ----------*/
+
+    --text-size      : var(--text-article-1);
+    --text-nudge-amt : 0;
+    
+    
+    --kerning-nudge-amt : 0;
+    --leading-nudge-amt : 0;
+    
+    
+    
+    /*---------- Text Equations ----------*/
+    
+    --textPortion : calc(var(--text-size) / 11);
+    
+    --textMaster      : calc(var(--text-size)      + var(--textNudgeMaster));
+    --textNudgeMaster : calc(var(--text-nudge-amt) * var(--textPortion));
+
+    --kerningPortion : calc(var(--textPortion)    / 11);
+    --kerningCore    : calc(var(--kerningPortion) * 3);
+    --kerningMaster  : calc(var(--kerningCore)    + calc(var(--kerningPortion) * var(--kerning-nudge-amt)));
+    
+    --leadingScale  : calc(var(--textMaster)   * var(--grc11-8));
+    --leadingMaster : calc(var(--leadingScale) + calc(var(--kerningPortion) * var(--leading-nudge-amt)));
+
+
+    /*---------- CSS Settings ----------*/
+
+    font-size      : var(--textMaster);
+    letter-spacing : var(--kerningMaster);
+    line-height    : var(--leadingMaster);
+}

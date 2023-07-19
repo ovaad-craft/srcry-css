@@ -1,0 +1,5 @@
+:root{
+    /*----------- Nudge Portions -----------*/
+    --nudgeSlice : var(--bsp);
+    --nudgeChunk : calc(var(--nudgeSlice) * 8);
+}

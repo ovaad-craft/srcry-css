@@ -1,0 +1,22 @@
+:root{
+    /*Line Sizes*/
+    --line-fine      : 1px;
+    --line-light     : max(2px, var(--bsp));
+    --line-narrow    : calc(var(--line-light)     * var(--grc12-2));
+    --line-semiBold  : calc(var(--line-narrow)    * var(--grc11-8));
+    --line-bold      : calc(var(--line-semiBold)  * var(--grc11-7));
+    --line-semiThick : calc(var(--line-bold)      * var(--grc11-7));
+    --line-thick     : calc(var(--line-semiThick) * var(--grc11-7));
+    --line-semiWide  : calc(var(--line-thick)     * var(--grc11-7));
+    --line-wide      : calc(var(--line-semiWide)  * var(--grc11-7));
+    --line-ultraWide : calc(var(--line-wide)      * var(--grc11-7));
+    --line-jumbo     : calc(var(--line-ultraWide) * var(--grc11-7));
+
+    /*Line Size Negative Values*/
+    --line-fine-   : calc(0 - var(--line-fine));    --line-light-      : calc(0 - var(--line-light));
+    --line-narrow- : calc(0 - var(--line-narrow));  --line-semiBold-   : calc(0 - var(--line-semiBold));
+    --line-bold-   : calc(0 - var(--line-bold));    --line-semiThick-  : calc(0 - var(--line-semiThick));
+    --line-thick-  : calc(0 - var(--line-thick));   --line-semiWide-   : calc(0 - var(--line-semiWide));
+    --line-wide-   : calc(0 - var(--line-wide));    --line-ultraWide-  : calc(0 - var(--line-ultraWide));
+    --line-jumbo-  : calc(0 - var(--line-jumbo));
+}
