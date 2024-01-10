@@ -22,7 +22,7 @@
     --kerningCore    : calc(var(--kerningPortion) * 3);
     --kerningMaster  : calc(var(--kerningCore)    + calc(var(--kerningPortion) * var(--kerning-nudge-amt)));
     
-    --leadingScale  : calc(var(--textMaster)   * var(--grc11-8));
+    --leadingScale  : calc(var(--textMaster)   * var(--grc12-1));
     --leadingMaster : calc(var(--leadingScale) + calc(var(--kerningPortion) * var(--leading-nudge-amt)));
 
 
