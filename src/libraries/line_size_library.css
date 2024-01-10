@@ -1,9 +1,9 @@
 :root{
     /*Line Sizes*/
-    --line-fine      : 1px;
-    --line-light     : max(2px, var(--bsp));
-    --line-narrow    : calc(var(--line-light)     * var(--grc12-2));
-    --line-semiBold  : calc(var(--line-narrow)    * var(--grc11-8));
+    --line-fine      : var(--bsp);
+    --line-light     : calc(var(--bsp)            * var(--grc11-7));
+    --line-narrow    : calc(var(--line-light)     * var(--grc11-7));
+    --line-semiBold  : calc(var(--line-narrow)    * var(--grc11-7));
     --line-bold      : calc(var(--line-semiBold)  * var(--grc11-7));
     --line-semiThick : calc(var(--line-bold)      * var(--grc11-7));
     --line-thick     : calc(var(--line-semiThick) * var(--grc11-7));
