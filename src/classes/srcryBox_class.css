@@ -13,7 +13,7 @@
     --baseSize-w-nudge-chunk : 0;
 
     
-    --edgeChase-w             : var(--crushGap-w);
+    --edgeChase-w             : var(--Crush-w-size);
     --edgeChase-w-nudge-slice : 0;
     --edgeChase-w-nudge-chunk : 0;
     
@@ -48,7 +48,7 @@
     --baseSize-h-nudge-chunk : 0;
     
     
-    --edgeChase-h             : var(--crushGap-h);
+    --edgeChase-h             : var(--Crush-h-size);
     --edgeChase-h-nudge-slice : 0;
     --edgeChase-h-nudge-chunk : 0;
     
@@ -172,62 +172,62 @@
 
     
     /* Size Equations*/
-    --Crush-w-size     : calc(100% - calc(var(--crushGap-w) + var(--CrushGap-W-NudgeMaster)));
-    --EdgeChase-w-size : calc(100% - var(--edgeChase-w));
+    --Crush-w-size     : calc(var(--crushGap-w)  + var(--CrushGap-W-NudgeMaster));
+    --EdgeChase-w-size : calc(var(--edgeChase-w) + var(--EdgeChase-W-NudgeMaster));
     
+    --Crush-w-master     : calc(100%                    - var(--Crush-w-size));
     --BaseSize-w-master  : calc(var(--baseSize-w)       + var(--BaseSize-W-NudgeMaster));
-    --EdgeChase-w-master : calc(var(--EdgeChase-w-size) - var(--EdgeChase-W-NudgeMaster));
+    --EdgeChase-w-master : calc(100%                    - var(--EdgeChase-w-size));
     --ChaseStop-w-master : calc(var(--chaseStop-w)      + var(--ChaseStop-W-NudgeMaster));
     
-    --Crush-h-size     : calc(100vh - calc(var(--crushGap-h) + var(--CrushGap-H-NudgeMaster)));
-    --EdgeChase-h-size : calc(100vh - var(--edgeChase-h));
+    --Crush-h-size     : calc(var(--crushGap-h)  + var(--CrushGap-H-NudgeMaster));
+    --EdgeChase-h-size : calc(var(--edgeChase-h) + var(--EdgeChase-H-NudgeMaster));
     
+    --Crush-h-master     : calc(100vh                   - var(--Crush-h-size));
     --BaseSize-h-master  : calc(var(--baseSize-h)       + var(--BaseSize-H-NudgeMaster));
-    --EdgeChase-h-master : calc(var(--EdgeChase-h-size) - var(--EdgeChase-H-NudgeMaster));
+    --EdgeChase-h-master : calc(100vh                   - var(--EdgeChase-h-size));
     --ChaseStop-h-master : calc(var(--chaseStop-h)      + var(--ChaseStop-H-NudgeMaster));
 
 
 
     /* Scaling Togglers */
-    --CrushBaseToggle-w : min(var(--Crush-w-size),      var(--BaseSize-w-master));
-    --BaseChaseToggle-w : max(var(--CrushBaseToggle-w), var(--EdgeChase-w-master));
-    --ChaseStopToggle-w : min(var(--BaseChaseToggle-w), var(--ChaseStop-w-master));
+    --CrushBaseToggle-w : min(var(--Crush-w-master),      var(--BaseSize-w-master));
+    --BaseChaseToggle-w : max(var(--CrushBaseToggle-w),   var(--EdgeChase-w-master));
+    --ChaseStopToggle-w : min(var(--BaseChaseToggle-w),   var(--ChaseStop-w-master));
 
-    --CrushBaseToggle-h : min(var(--Crush-h-size),      var(--BaseSize-h-master));
-    --BaseChaseToggle-h : max(var(--CrushBaseToggle-h), var(--EdgeChase-h-master));
-    --ChaseStopToggle-h : min(var(--BaseChaseToggle-h), var(--ChaseStop-h-master));
+    --CrushBaseToggle-h : min(var(--Crush-h-master),      var(--BaseSize-h-master));
+    --BaseChaseToggle-h : max(var(--CrushBaseToggle-h),   var(--EdgeChase-h-master));
+    --ChaseStopToggle-h : min(var(--BaseChaseToggle-h),   var(--ChaseStop-h-master));
 
 
     /* Squish Growth Equations */
     --SquishCore-w         : calc(var(--squishGrowth-w-start) - 100vh);
-    --SquishChunk-w        : calc(var(--SquishCore-w)         / 11);
+    --SquishChunk-w        : calc(var(--SquishCore-w)         / 33);
     --SquishTotal-w        : calc(var(--SquishChunk-w)        * var(--squishGrowth-w-speed));
     --SquishGrowthSize-w   : calc(var(--ChaseStopToggle-w)    + var(--SquishTotal-w));
     
-    /*--SquishGrowthMaxNudgeEquation-w : calc(var(--squishGrowth-w-max-nudgeScale) * var(--squishGrowth-w-max-nudgeAmount));*/
-    --SquishGrowthMaxSize-w          : calc(var(--SquishTotal-w)                 + var(--SquishGrowth-W-Max-NudgeMaster));
+    --SquishGrowthWMaxEquation : calc(var(--squishGrowth-w-max) + var(--SquishGrowth-W-Max-NudgeMaster));
     
-    --SquishGrowthMaster-w : min(var(--SquishGrowthSize-w), var(--SquishGrowthMaxSize-w));
+    --SquishGrowthMaster-w : min(var(--SquishGrowthWMaxEquation), var(--SquishGrowthSize-w));
 
     --SquishCore-h         : calc(var(--squishGrowth-h-start) - 100vw);
     --SquishChunk-h        : calc(var(--SquishCore-h)         / 33);
     --SquishTotal-h        : calc(var(--SquishChunk-h)        * var(--squishGrowth-h-speed));
     --SquishGrowthSize-h   : calc(var(--ChaseStopToggle-h)    + var(--SquishTotal-h));
 
-    /*--SquishGrowthMaxNudgeEquation-h : calc(var(--squishGrowth-h-max-nudgeScale) * var(--squishGrowth-h-max-nudgeAmount));*/
+    --SquishGrowthHMaxEquation: calc(var(--squishGrowth-h-max) + var(--SquishGrowth-H-Max-NudgeMaster));
     --SquishGrowthMaxSize-h          : calc(var(--SquishTotal-h)                 + var(--SquishGrowth-H-Max-NudgeMaster));
 
-    --SquishGrowthMaster-h : min(var(--SquishGrowthSize-h), var(--squishGrowth-h-max));
+    --SquishGrowthMaster-h : min(var(--SquishGrowthHMaxEquation), var(--SquishGrowthSize-h));
 
 
 
     /* Stretch Shrink Equations */
     --StretchShrinkCore-w  : calc(100vh                      - var(--stretchShrink-w-start));
-    --StretchShrinkChunk-w : calc(var(--StretchShrinkCore-w) / 11);
+    --StretchShrinkChunk-w : calc(var(--StretchShrinkCore-w) / 33);
     --StretchShrinkTotal-w : calc(var(--StretchShrinkCore-w) * var(--stretchShrink-w-speed));
     --StretchShrinkSize-w  : calc(var(--ChaseStopToggle-w)   - var(--StretchShrinkTotal-w));
 
-    /*--StretchShrinkMinNudgeEquation-w : calc(var(--stretchShrink-w-min-nudgeScale) * var(--stretchShrink-w-min-nudgeAmount));*/
     --StretchShrinkMinEquation-w      : calc(var(--stretchShrink-w-min)            + var(--StretchShrink-W-Min-NudgeMaster));
     
     --StretchShrinkToggle-w           : min(var(--ChaseStopToggle-w),        var(--StretchShrinkSize-w));
@@ -237,12 +237,11 @@
 
     
     --StretchShrinkCore-h  : calc(100vw                      - var(--stretchShrink-h-start));
-    --StretchShrinkChunk-h : calc(var(--StretchShrinkCore-h) / 11);
+    --StretchShrinkChunk-h : calc(var(--StretchShrinkCore-h) / 33);
     --StretchShrinkTotal-h : calc(var(--StretchShrinkCore-h) * var(--stretchShrink-h-speed));
     --StretchShrinkSize-h  : calc(var(--ChaseStopToggle-h)   - var(--StretchShrinkTotal-h));
 
-    /*--StretchShrinkMinNudgeEquation-h : calc(var(--stretchShrink-h-min-nudgeScale) * var(--stretchShrink-h-min-nudgeAmount));*/
-    --StretchShrinkMinEquation-h      : calc(var(--stretchShrink-h-min)            + var(--StretchShrink-H-Min-NudgeMaster));
+    --StretchShrinkMinEquation-h      : calc(var(--stretchShrink-h-min) + var(--StretchShrink-H-Min-NudgeMaster));
     
     --StretchShrinkToggle-h           : min(var(--ChaseStopToggle-h),        var(--StretchShrinkSize-h));
     --StretchShrinkMinToggle-h        : max(var(--StretchShrinkToggle-h),    var(--StretchShrinkMinEquation-h));
